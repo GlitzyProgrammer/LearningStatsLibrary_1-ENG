@@ -3,11 +3,8 @@ import matplotlib.pyplot as plt
 
 df = pd.read_excel(r"C:\Users\ljwil\Desktop\Intro STATS\Project Stats 2\Chapter 3\Movies2016.xlsx",sheet_name="Sheet1")
 
-
-
 df['Opening Gross Sales ($ millions)'] =  pd.read_excel(r"C:\Users\ljwil\Desktop\Intro STATS\Project Stats 2\Chapter 3\Movies2016.xlsx",usecols=['Opening Gross Sales ($ millions)'])
 df["Total Gross Sales ($ millions)"] = pd.read_excel(r"C:\Users\ljwil\Desktop\Intro STATS\Project Stats 2\Chapter 3\Movies2016.xlsx",usecols=["Total Gross Sales ($ millions)"])
-
 
 #IQR caluation 
 
@@ -26,6 +23,9 @@ print("Upper Emp Rule",round(Upper_EMP,7))
 print("Lower Emp Rule",round(Lower_EMP,7))
 print(" ")
 print(" ")
+
+
+# Total Gross Sales 
 q1 = df["Total Gross Sales ($ millions)"].quantile(0.25)
 q3 = df["Total Gross Sales ($ millions)"].quantile(0.75)
 iqr = q3-q1
