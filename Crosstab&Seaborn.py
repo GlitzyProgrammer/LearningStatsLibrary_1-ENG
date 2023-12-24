@@ -25,6 +25,8 @@ plt.tick_params(axis='x', which='both', bottom=False, top=True)
 
 plt.xticks(np.arange(len(cross_table.columns) ), cross_table.columns,rotation=45, ha='right') 
 
+#The i and j represent the indexes for row and column entries in the cross_table that was made earlier
+#This algorithm places the elements into the heatmap 
 for i in range(len(cross_table.index)):
     for j in range(len(cross_table.columns)):
         plt.text(j, i, str(cross_table.iloc[i, j]), ha='center', va='center', color='black')
