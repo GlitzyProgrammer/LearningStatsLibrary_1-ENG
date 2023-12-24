@@ -11,13 +11,15 @@ x_axis_labels = [' Over $100M for Opening Gross Sales',	' Under $100M for Openin
 y_axis_labels = ['SuperHero',"non-Suphero"]
 
 superhero = ['X-Men Apocalypse', 'Doctor Strange', 'Deadpool', 'Suicide Squad', 'Batman v Superman: Dawn of Justice', 'Captain America: Civil War']
-# I will use this list to seperate the supehero moives and the non-supherhero movies
+
 
 print(" ")
 #This point I filtered out movies in general that had Opening Gross Sales over 50 million dollars
 print("The following movies had an Opening Gross Sales more than 50 million")
 more_50mil = {"Movie Title":[],
               "Opening Gross Sales ($ millions)":[]}
+
+#Iterating through the index of the dataframe for the Opening Gross Sales
 for index, row in df.iterrows():
     current_value = row["Opening Gross Sales ($ millions)"]
     if current_value > 50:
@@ -40,6 +42,7 @@ u_left= 0
 u_right=0
 l_left = 0
 l_right = 0
+# This iterates through the fifymillion_sorted dataframe searching for "Moive Title" and "Opening Gross Sales" 
 for index, row in fifymillion_sorted.iterrows():
       if row['Movie Title'] in superhero and row["Opening Gross Sales ($ millions)"]>100:   #greater than 100 and suphero
            u_left +=1
