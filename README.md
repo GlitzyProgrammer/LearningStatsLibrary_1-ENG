@@ -1,2 +1,2 @@
 # LearningStatsLibrary_2
-This is a collection of files that have me learning how to do basic displays of data from data sets while applying basic Statistics concepts. 
+This is the second repository containing elementary operations for displaying data in Python using libraries Scipy, Matplotlib, and Numpy for making necessary calculations. I also used Pandas to make displaying the information easy.
