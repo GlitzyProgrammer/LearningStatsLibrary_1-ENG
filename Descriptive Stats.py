@@ -1,6 +1,4 @@
 import pandas as pd 
-import matplotlib.pyplot as plt
-import seaborn as sns  # for heatmap styling
 import numpy as np
 from scipy.stats import skew
 
@@ -12,7 +10,7 @@ df["Total Gross Sales ($ millions)"] = pd.read_excel(r"C:\Users\ljwil\Desktop\In
 df["Weeks in Release"]= pd.read_excel(r"C:\Users\ljwil\Desktop\Intro STATS\Project Stats 2\Chapter 3\Movies2016.xlsx",usecols=["Weeks in Release"])
 #Descriptive Statstics 
 
-kurt_OP_Gross =  df['Opening Gross Sales ($ millions)'].astype(int)  # converts data to int type for smooth kurtosis caluation
+kurt_OP_Gross =  df['Opening Gross Sales ($ millions)'].astype(int)  # converts data to int type for smooth kurtosis calculation
 kurt_Num_theater=  df["Number of Theaters"].astype(int)
 kurt_Total_Gross =  df["Total Gross Sales ($ millions)"].astype(int)
 kurt_Weeks=df["Weeks in Release"].astype(int)
