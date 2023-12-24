@@ -43,9 +43,10 @@ y_axis = df["Total Gross Sales ($ millions)"].astype(int)
 
 correlation_coefficient = df["Weeks in Release"].astype(int).corr(df["Total Gross Sales ($ millions)"].astype(int))
 
-
 df.plot(kind='scatter',x="Weeks in Release",y="Total Gross Sales ($ millions)")
 fit = np.polyfit(df["Weeks in Release"], df["Total Gross Sales ($ millions)"], 1)
+
+#Adds y-axis lines to the scatter plot 
 y_ticks = plt.yticks()[0]
 for y_tick in y_ticks:
     if y_tick < 0:
