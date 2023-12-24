@@ -12,10 +12,11 @@ y_axis = y_axis.astype(float)
 bins_y = [20,120,220,320,420,520,620]
 bins_x = [5,25,30,50]
 
-#Changed the orignal x-axis bins because the way that cross tab does bins goes infintly inbetween points
-#It also ignored some ibetween values in the bins suggested automatically
+#Changed the original x-axis bins because the way that cross tab does bins goes infinitely in between points
+# bins_x = [7,14,28,49]
+#It also ignored some between values in the bins suggested automatically
 
-print(len(df['Weeks in Release']))
+
 df["Weeks in Release"]=pd.cut(df["Weeks in Release"],bins=bins_x)
 df["Total Gross Sales ($ millions)"]=pd.cut(df["Total Gross Sales ($ millions)"],bins=bins_y, right=True)
 
