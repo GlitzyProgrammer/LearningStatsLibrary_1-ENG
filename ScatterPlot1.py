@@ -39,6 +39,7 @@ for index, row in df.iterrows():
 
 
 found_title = []   
+#Iterates through the dataframe's index trying to find the two movie titles that were found earlier 
 for index, row in df.iterrows():
     if label_2ndcond == row["Movie Title"]:
         found_title.append(index)
