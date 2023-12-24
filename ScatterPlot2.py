@@ -37,7 +37,7 @@ for index, row in df.iterrows():
       
     if movie_title  == row["Movie Title"]:
         found_title.append(index)  
-
+#Places the information on the scatter plot
 for i in found_title:
     plt.text(df["Weeks in Release"][i] + 0.5, df["Total Gross Sales ($ millions)"][i] + 0.5, df["Movie Title"][i], fontsize=9, ha='left', va='bottom')
 
