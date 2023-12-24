@@ -22,7 +22,10 @@ dataframes = {'Opening Gross Sales ($ millions)': df['Opening Gross Sales ($ mil
                "Total Gross Sales ($ millions)": df["Total Gross Sales ($ millions)"],
                'Number of Theaters':df['Number of Theaters'],
                'Weeks in Realse':df['Weeks in Realse']}
-#For this part I did a pairwise comparison using the Pearson Correlation in numpy for each data frame pulled from the Excel File 
+
+
+
+#This function does a pairwise comparison using the Pearson Correlation in numpy for each data frame pulled from the Excel File 
 def pariwise_cor_pearson(dataframes):  
      for pair in itertools.combinations(dataframes, 2): 
              element1, element2 = pair 
