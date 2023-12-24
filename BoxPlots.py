@@ -10,6 +10,7 @@ df["Total Gross Sales ($ millions)"] = pd.read_excel(r"C:\Users\ljwil\Desktop\In
 
 
 plot= df['Total Gross Sales ($ millions)']
+#Adds the mean plot to the boxplot
 plot_mean = plot.mean()
 out=plt.boxplot(plot,meanline=True,showfliers=True, flierprops=dict(markerfacecolor='pink', marker='o'),patch_artist=True)
 target_box_color='chartreuse'
@@ -31,6 +32,7 @@ plt.show()
 
 
 plot= df['Opening Gross Sales ($ millions)']
+#Adds the mean plot to the boxplot
 plot_mean = plot.mean()
 out=plt.boxplot(plot,meanline=True,showfliers=True, flierprops=dict(markerfacecolor='pink', marker='o'),patch_artist=True)
 target_box_color='chartreuse'
